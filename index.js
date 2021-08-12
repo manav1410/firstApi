@@ -133,7 +133,7 @@ app.post("/user/new", async (req, res) => {
 
 
 
-app.listen(4444, () =>
+app.listen(process.env.PORT, () =>
     connectDB()
         .then((data) => console.log('Server is running...'))
         .catch((error) => console.log(error))
